@@ -16,11 +16,8 @@ import API from './src/assets/NewLogos/Apis.png'
 import JSON from './src/assets/NewLogos/Json.png'
 import RESPONSIVE from './src/assets/NewLogos/Responsive.png'
 import RLOGO from './src/assets/NewLogos/RLogo.png'
-import WHATSAPP from './src/assets/NewLogos/Whatsapp.png'
-import FACEBOOK  from './src/assets/NewLogos/FaceBook.png'
-import GIT from './src/assets/NewLogos/GitHub.png'
 
-export {FORM,API,JSON,RESPONSIVE,RLOGO,WHATSAPP,FACEBOOK,GIT}
+export {FORM,API,JSON,RESPONSIVE,RLOGO}
 export { WALLZ, MERIZAMEEN, TODO };
 export { SKILLS };
 export { BTNLOADER };
