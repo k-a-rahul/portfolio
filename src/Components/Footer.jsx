@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function Footer() {
   return (
     <div className="w-full text-black p-2 grid grid-cols-2 justify-items-start items-start ">
@@ -16,28 +15,26 @@ function Footer() {
       <div id="two" className="flex flex-col justify-center items-start p-2">
         <span className="text-2xl xl:text-4xl font-semibold">Am Available</span>
         <div className="flex flex-col justify-center items-start gap-2">
-          <a className="group"
+          <a
+            className="group"
             href="https://api.whatsapp.com/send/?phone=7347506388&text&type=phone_number&app_absent=0"
             target="_blank"
           >
             WhatsApp
-            <span className="h-[1.5px] flex shadow-black group-hover:border-l-[70px] transition-all duration-300 delay-0 border-l-[0px]  border-mediumPurple"></span>
           </a>
           <a
-          className="group"
+            className="group"
             href="https://www.facebook.com/profile.php?id=61560864673430&mibextid=ZbWKwL"
             target="_blank"
           >
             Facebook
-            <span className="h-[1.5px] flex shadow-black group-hover:border-r-[70px] transition-all duration-300 delay-0 border-l-[0px]  border-mediumPurple"></span>
           </a>
           <a
-          className="hover:opacity-90"
+            className="hover:opacity-90"
             href="https://github.com/k-a-rahul"
             target="_blank"
           >
             Github
-            <span className="h-[1.5px] flex shadow-black group-hover:border-l-[54px] transition-all duration-300 delay-0 border-l-[0px]  border-mediumPurple"></span>
           </a>
         </div>
       </div>
