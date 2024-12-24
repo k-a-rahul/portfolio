@@ -15,19 +15,21 @@ function Footer() {
       </div>
       <div id="two" className="flex flex-col justify-center items-start p-2">
         <span className="text-2xl xl:text-4xl font-semibold">Am Available</span>
-        <div className="flex justify-center items-center gap-4">
-          <a className="hover:opacity-90"
+        <div className="flex flex-col justify-center items-start gap-2">
+          <a className="group"
             href="https://api.whatsapp.com/send/?phone=7347506388&text&type=phone_number&app_absent=0"
             target="_blank"
           >
             WhatsApp
+            <span className="h-[1.5px] flex shadow-black group-hover:border-l-[70px] transition-all duration-300 delay-0 border-l-[0px]  border-mediumPurple"></span>
           </a>
           <a
-          className="hover:opacity-90"
+          className="group"
             href="https://www.facebook.com/profile.php?id=61560864673430&mibextid=ZbWKwL"
             target="_blank"
           >
             Facebook
+            <span className="h-[1.5px] flex shadow-black group-hover:border-r-[70px] transition-all duration-300 delay-0 border-l-[0px]  border-mediumPurple"></span>
           </a>
           <a
           className="hover:opacity-90"
@@ -35,6 +37,7 @@ function Footer() {
             target="_blank"
           >
             Github
+            <span className="h-[1.5px] flex shadow-black group-hover:border-l-[54px] transition-all duration-300 delay-0 border-l-[0px]  border-mediumPurple"></span>
           </a>
         </div>
       </div>
