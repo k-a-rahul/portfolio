@@ -44,25 +44,4 @@ function Footer() {
 
 export default Footer;
 
-{
-  /* <div className="w-1/2 flex flex-col justify-evenly p-1 items-center">
-          <div className="flex flex-col justify-center items-center text-center gap-2 rounded-full p-2 ">
-            <button className="group text-xl ">
-              Click
-              <span className="w-[84px] h-[4px] flex  shadow-black shadow-2xl group-hover:border-l-[84px] transition-all duration-300 delay-0 border-l-[0px]  border-white"></span>
-            </button>
-            <button className="group text-xl ">
-              Learn
-              <span className="w-[84px] h-[4px] flex  shadow-black shadow-2xl group-hover:border-l-[84px] transition-all duration-300 delay-0 border-l-[0px]  border-white"></span>
-            </button>
-            <button className="group text-xl ">
-              SkillUP
-              <span className="w-[84px] h-[4px] flex  shadow-black shadow-2xl group-hover:border-l-[84px] transition-all duration-300 delay-0 border-l-[0px]  border-white"></span>
-            </button>
-            <button className="group text-xl ">
-              Click
-              <span className="w-[84px] h-[4px] flex  shadow-black shadow-2xl group-hover:border-l-[84px] transition-all duration-300 delay-0 border-l-[0px]  border-white"></span>
-            </button>
-          </div>
-        </div> */
-}
+
