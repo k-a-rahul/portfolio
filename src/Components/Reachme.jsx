@@ -4,6 +4,7 @@ import Toaster from "./Toaster";
 import emailjs from "emailjs-com";
 import Lottie from "react-lottie-player";
 import { BTNLOADER } from "../../export";
+import { toast, ToastContainer } from "react-toastify";
 
 
 const serviceId = "service_x7wpv5i";
@@ -13,8 +14,6 @@ function Reachme() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [text, setText] = useState("");
-  const [type, setType] = useState("");
   const [loader,setLoader] = useState(false)
   
   const formref = useRef();
@@ -27,30 +26,35 @@ function Reachme() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
-      setType("warn");
-      setText("Please Recheck the Form");
+      toast.warn("Please Recheck the Form")
+      // setText("Please Recheck the Form");
     } else if (
       name === "" ||
       /[`!@#$%^&*_\-+]/.test(name) ||
       /[1234567890]/.test(name)
     ) {
-      setType("warn");
-      setText("Enter Valid Name");
+      toast.warn("Enter Valid Name")
+      // setType("warn");
+      // setText("Enter Valid Name");
     } else if (
       email === "" ||
       !email.includes("@") ||
       !email.includes(".com")
     ) {
-      setType("warn");
-      setText("Enter Valid Email Id");
+      toast.warn("Enter Valid Email Id")
+      // setType("warn");
+      // setText("Enter Valid Email Id");
     } else if (message === "") {
-      setType("warn");
-      setText("Write a Message To Send");
+      toast.warn("Please Write A short Message")
+      // setType("warn");
+      // setText("Write a Message To Send");
     } else if (message.length < 10) {
-      setType("warn");
-      setText("Message must contain more than 10 Words");
+      toast.warn("Message must contain more than 10 Words")
+      // setType("warn");
+      // setText("Message must contain more than 10 Words");
     } else if (message.length > 500) {
-      setText("Message must be less than 500 Words");
+      toast.warn("Message Should not be more than 500 Words")
+      // setText("Message must be less than 500 Words");
     } else {
       try {
         setLoader(true)
@@ -61,21 +65,24 @@ function Reachme() {
           publicKey
         );
         if (response.status === 200) {
-          setText(`Thanks ${name} We will be in touch Shortly`);
+          toast.success(`Thanks, ${name} For Your interest`)
+          // setText(`Thanks ${name} We will be in touch Shortly`);
           setName("");
           setEmail("");
           setMessage("");
           setLoader(false)
         } else {
           setLoader(false)
-          setText("Something went wrong");
+          toast.warn("Something went wrong")
+          // setText("Something went wrong");
         }
       } catch (error) {
         console.error(error);
       }
-      console.log(name, email, message);
-      setText("We Will be in touch Soon !");
-      setType("");
+      // console.log(name, email, message);
+      // toast.success("We Will be in touch Soon")
+      // // setText("We Will be in touch Soon !");
+      // // setType("");
     }
   };
   const containerVariants = {
@@ -92,18 +99,19 @@ function Reachme() {
     show: { opacity: 1, transition: { type: "spring", stiffness: 50 } },
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setText("");
-    }, 7000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setText("");
+  //   }, 7000);
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [text]);
+  //   return () => {
+  //     clearTimeout(timer);
+  //   };
+  // }, []);
   return (
     <>
-      <Toaster text={text} type={type} onclick={() => setText("")} />
+      {/* <Toaster text={text} type={type} onclick={() => setText("")} /> */}
+      <ToastContainer pauseOnHover={false} pauseOnFocusLoss={false}/>
       <div className="w-full grid grid-cols-1 xl:grid-cols-2 justify-items-center gap-2 items-center p-2 overflow-hidden ">
         <motion.span
           initial="hidden"
