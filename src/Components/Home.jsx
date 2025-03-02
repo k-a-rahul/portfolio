@@ -165,7 +165,7 @@ function Home() {
             >
               <span className="text-textpurple">
                 <span className="md:text-5xl border-2 border-mediumPurple border-r-8 border-l-4 rounded-full p-1 px-2 shadow-softPurple shadow-inner">
-                  Front-end
+                  Software
                 </span>
               </span>{" "}
               {dev}
