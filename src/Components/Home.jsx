@@ -80,7 +80,7 @@ function Home() {
           className="absolute top-10 right-3"
         >
           <a
-            href="https://drive.google.com/file/d/1NKcv6OvF2hOrLOX8buQWuVJM9LhkNHzR/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1HdOhk1UAHviCBsEY2NxkZFAVcSViMv9n/view?usp=sharing"
             target="_blank"
             title="Download resume"
           >
